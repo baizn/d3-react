@@ -1,0 +1,35 @@
+@import 'intro';
+@import 'nav';
+
+$text_color: #232323;
+
+body {
+    color: $text_color;
+    background: url(../img/bg.png) no-repeat;
+    background-size: cover; 
+}
+
+.hyfe-pie-tooltip {
+    position: absolute;
+    width: 120;
+    height: auto;
+    font-family: simsum;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    border-width: 2px solid black;
+    border-radius: 5px;
+}
+.hyfe-pie-tooltip:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 20%;
+    margin-left: -8px;
+    width: 0;
+    height: 0;
+    border-bottom: 12px solid #000;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+}
