@@ -1,13 +1,12 @@
 
-import Immutable from 'immutable'
 import actionType  from '../constants/actionType'
-const { LOADED_ITEMS } = actionType
+const { LOAD_PIE } = actionType
 
-let defaultState = Immutable.fromJS([])
+let defaultState = {}
 export default function (state = defaultState, action) {
   switch(action.type) {
-    case LOADED_ITEMS:
-      return Immutable.fromJS(action.response)
+    case LOAD_PIE:
+      return action.response
     default:
       return state
   }
