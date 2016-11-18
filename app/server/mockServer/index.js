@@ -2,12 +2,14 @@
 import express from 'express'
 import path from 'path'
 import superAgent from 'superagent'
-const { getChartData, items, getUser, getItem } = require('./mockApi')
+const { getPieData, items, getUser, getItem } = require('./mockApi')
 let router = express.Router()
 
 // mock apis
-router.get('/api/charts', (req, res)=> {
-  res.send(getChartData())
+router.get('/api/pie', (req, res)=> {
+  let data = getPieData()
+  console.log('获取到的数据=', data)
+  res.send(data)
 })
 
 router.get('/api/items', (req, res)=> {

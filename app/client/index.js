@@ -7,18 +7,12 @@ import { browserHistory } from 'react-router'
 import configureStore from 'src/store/configureStore'
 import createRoutes from './routes'
 import { Provider } from 'react-redux'
-import Immutable from 'immutable'
-import _ from 'lodash'
 
 let initialState = {}
-console.log('initialState1=' + JSON.stringify(window.__INITIAL_STATE__))
 if (window.__INITIAL_STATE__) {
+  console.log('initialState=' + JSON.stringify(window.__INITIAL_STATE__))
   try {
-    let plain = JSON.parse(JSON.stringify(window.__INITIAL_STATE__))
-    console.log('initialState=' + plain)
-    _.each(plain, (val, key)=> {
-      initialState[key] = Immutable.fromJS(val)
-    })
+    initialState = JSON.parse(JSON.stringify(window.__INITIAL_STATE__))
   } catch (e) {
     console.log('JSON.parse faild')
   }

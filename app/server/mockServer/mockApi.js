@@ -159,9 +159,46 @@ export function getItem (id) {
   return obj
 }
 
-export function getChartData() {
+export function getPieData() {
   return {
-    xData: ['1月', '2月', '3月', '4月', '5月'],
-    yData: [12, 31, 9, 10, 20]
-  }
+      width: 600,
+      height: 600,
+      showTips: true,
+      showInnerText: true,
+      decimalPlaces: 1,
+      showOuterText: true,
+      dragRedraw: true,
+      innerTextStyle: {
+        color: 'white',
+        fontSize: '15px'
+      },
+      outerStyle: {
+        line: {
+          color: 'red',
+          width: 2
+        },
+        text: {
+          color: 'white',
+          fontSize: '15px'
+        }
+      },
+      //tipsClassName: '',
+      innerRadius: 0,
+      outerRadius: 150,
+      colors: ['red', 'green'],
+      data: [
+            {
+                value: 123,
+                name: 'AAA'
+            },
+            {
+                value: 12,
+                name: 'BBB'
+            },
+            {
+                value: 80,
+                name: 'CCC'
+            }
+        ]
+    }
 }
