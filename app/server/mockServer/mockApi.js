@@ -202,3 +202,27 @@ export function getPieData() {
         ]
     }
 }
+
+export function getTickBarData() {
+  return  [
+        {
+            name: '团伙A',
+            value: 300
+        },{
+            name: '团伙B',
+            value: 200
+        },{
+            name: '团伙C',
+            value: 100
+        },{
+            name: '团伙D',
+            value: 50
+        },{
+            name: '团伙E',
+            value: 40
+        },{
+            name: '团伙E',
+            value: 60
+        }
+    ]
+}

@@ -2,7 +2,7 @@
 import express from 'express'
 import path from 'path'
 import superAgent from 'superagent'
-const { getPieData, items, getUser, getItem } = require('./mockApi')
+const { getPieData, getTickBarData, getUser, getItem } = require('./mockApi')
 let router = express.Router()
 
 // mock apis
@@ -12,8 +12,8 @@ router.get('/api/pie', (req, res)=> {
   res.send(data)
 })
 
-router.get('/api/items', (req, res)=> {
-  res.send(items);
+router.get('/api/tickbar', (req, res)=> {
+  res.send(getTickBarData());
 });
 
 router.get('/api/users/:id', (req, res)=> {
